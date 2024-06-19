@@ -28,7 +28,7 @@ num_classes = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_r
 
 
 model = Plant_Disease_Model()
-dir = str(input("Model path $:")    
+dir = str(input("Model path $:"))   
 model.load_state_dict(torch.load(
     dir, map_location=torch.device('cpu')))
 model.eval()
