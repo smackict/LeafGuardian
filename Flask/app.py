@@ -20,7 +20,7 @@ def predict():
             prediction = predict_image(img)
             print(prediction)
             res = Markup(utils.disease_dic[prediction])
-            return render_template('display.html', status=200, result=res)
+            return res, render_template('display.html', status=200, result=res)
         except:
             pass
     return render_template('index.html', status=500, res="Internal Server Error")
