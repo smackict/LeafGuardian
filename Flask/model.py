@@ -28,7 +28,7 @@ num_classes = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_r
 
 
 model = Plant_Disease_Model()
-dir = "/Models/plantDisease-resnet34.pth"   
+dir = "/opt/render/project/src/Models/plantDisease-resnet34.pth"   
 model.load_state_dict(torch.load(
     dir, map_location=torch.device('cpu')))
 model.eval()
